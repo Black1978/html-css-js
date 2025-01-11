@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Анимированный одностраничник</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="open">
+		<div class="layer"></div>
+		<div class="layer"><div id="loading"></div></div>
+	</div>
+	<section class="first">
+		<!--часть 2 -->
+		<div class="header">
+			<h2 class="logo"> Ваш Лого </h2>
+			<ul class="desktop-menu">
+				<li>
+					<a href="#" class="active">Главная</a>
+				</li>
+				<li>
+					<a href="#">Обо мне</a>
+				</li>
+				<li>
+					<a href="#">Цены</a>
+				</li>
+				<li>
+					<a href="#">Блог</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+
+			</ul>
+			<nav class="nav">
+			  <input class="nav__check" type="checkbox" id="showmenu"/>
+			  <label class="nav__showmenu" for="showmenu">&#9776;</label>
+			  <label class="nav__back" for="showmenu"></label>
+			  <ul class="menu">
+			    <li><a class="menu__item" href="#">Главная</a></li>
+			    <li><a class="menu__item" href="#">Обо мне</a></li>
+			    <li><a class="menu__item" href="#">Цены</a></li>
+			    <li><a class="menu__item" href="#">Блог</a></li>
+			    <li><a class="menu__item" href="#">Контакты</a></li>
+			  </ul>
+			</nav>
+		</div>
+		<div class="bannerText">
+			<h2> С Вами Александр Шулепов</h2><br>
+			<h3> В этом видео мы создадим анимированный Лендинг </h3>
+			<p> Привет, друзья!
+Меня зовут Александр Шулепов, мне 25 лет.
+Я искренне люблю веб-разработку и интернет-маркетинг, активно изучаю новые стандарты, а в свободное время делюсь своим опытом.
+Живу в Санкт-Петербурге.</p>
+<a href="#">Читать далее</a>
+		</div>
+		<img src="al.png" class="al">
+		<ul class="sci">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			</ul>
+			<div class="element1"></div>
+			<div class="element2"></div>
+	</section>
+
+	<section class="second">
+			<!--часть 2 -->
+			<h3 class="second-title">Выберите категорию, чтобы начать:</h3>
+			<div class="categories-wrapper">
+				<div class="categories-element">
+					<div class="categories-item__icon">
+						<img src="icons/web.svg" alt="">
+					</div>
+					<span class="category-title">Web, Mobile & Software Dev</span>
+				</div>
+				<div class="categories-element">
+					<div class="categories-item__icon">
+						<img src="icons/design.svg" alt="">
+					</div>
+					<span class="category-title">Design & Creative</span>
+				</div>
+				<div class="categories-element">
+					<div class="categories-item__icon">
+						<img src="icons/writing.svg" alt="">
+					</div>
+					<span class="category-title">Writing</span>
+				</div>
+				<div class="categories-element">
+					<div class="categories-item__icon">
+						<img src="icons/sales.svg" alt="">
+					</div>
+					<span class="category-title">Sales & Marketing</span>
+				</div>
+				<div class="categories-element">
+					<div class="categories-item__icon">
+						<img src="icons/support.svg" alt="">
+					</div>
+					<span class="category-title">Admin Support</span>
+				</div>
+				<div class="categories-element">
+					<div class="categories-item__icon">
+						<img src="icons/service.svg" alt="">
+					</div>
+					<span class="category-title">Customer Service</span>
+				</div>
+				<div class="categories-element">
+					<div class="categories-item__icon">
+						<img src="icons/data-science.svg" alt="">
+					</div>
+					<span class="category-title">Data Science & Analytics</span>
+				</div>
+				<div class="categories-element">
+					<div class="categories-item__icon">
+						<img src="icons/engineering.svg" alt="">
+					</div>
+					<span class="category-title">Engineering & Architecture</span>
+				</div>
+			</div>
+	</section>
+	<section class="third">
+		<h3 class="third-title">Обратная связь</h3>
+		<p class="feedback__text">Если у вас появились вопросы, свяжитесь с нами по номеру <a href="tel:+74993717727" class="feedback__text-link">+7 499 371 77 27</a> или отправьте сообщение в форме ниже</p>
+		<form action="" class="block-form">
+			<div class="form-left">
+				<label class="form-label"> Ваше имя
+			    <span class="form-control-wrap">
+			    	<input type="text" name="your-name" value="" size="40" class="form-input" placeholder="Имя">
+			    </span> 
+			  	</label>
+			  	<label class="form-label"> Телефон
+			    <span class="form-control-wrap">
+					<input type="tel" name="tel-888" value="+7" size="40" minlength="8" class="form-input" autocomplete="off" placeholder="8 (912) 345-67-89">
+			    </span> 
+			  	</label>
+			  	<label class="form-label form-label-last"> E-mail 
+				    <span class="form-control-wrap">
+				    	<input type="email" name="your-email" value="" size="40" class="form-input form-input-last" placeholder="example@gmail.com">
+				    </span> 
+				</label>
+			</div>
+			<div class="form-right">
+				<label class="form-label"> Сообщение
+				    <span class="form-control-wrap">
+				    	<textarea name="your-message" cols="" rows="" class="form-textarea" placeholder="Ваш вопрос"></textarea>
+				    </span> 
+				</label>
+				<input type="submit" value="Отправить" class="submit">
+			</div>
+		</form>
+	</section>
+</body>
+</html>
+
+
