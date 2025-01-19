@@ -941,7 +941,7 @@ body {
     margin-top: 30px;
     width: max-content;
     padding: 10px;
-    background-color: var( --slaiderBtn1);
+    background-color: var(--slaiderBtn1);
     color: var(--slaiderColor2);
     font-weight: 500;
 }
@@ -1014,6 +1014,123 @@ body {
     }
 }
 /*---The end of the slaider's styles-----*/
+/*---The beginning of the brand's styles-----*/
+.brands {
+    display: flex;
+}
+.brands-column {
+    flex: 0 1 33.333%;
+}
+.brands-item {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+.brands-icon {
+    display: inline-block;
+    width: 250px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+.brands-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.brands-content {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+}
+.brands-content h2{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: var(--servicesColor1);
+}
+.brands-content::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #ffffff;
+    bottom: -19px;
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+.brands-image {
+    width: 100%;
+    padding: 0 0 37.5% 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: url('img/srcimg/world.jpg');
+}
+.brands-text {
+    color: var(--linksColor);
+}
+.brands-text::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    margin: 20px auto 0px auto;
+}
+.brands-item-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(5, 77, 86, 0.6);
+    transition: opacity 1.8s linear;
+    opacity: 0;
+}
+.brands-item:hover .brands-item-logo {
+    opacity: 1;
+    transition: opacity 0.8s linear;
+}
+.brands-item-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.brands-item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.brands-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 1500px) {
+    .brands-content {
+        padding: 15px;
+    }
+}
+@media (max-width: 1024px) {
+    .brands {
+        flex-direction: column;
+    }
+    .brands-item {
+        padding: 58% 0 0 0;
+    }
+}
+/*---The end of the brand's styles-----*/
 /*---The beginning of the accordion's styles-----*/
 .accordion {
     background-color: var(--accordionBg1);
@@ -1023,7 +1140,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px;
+    padding: 80px 30px;
 }
 .accord-body h2 {
     margin-bottom: 30px;
@@ -1141,29 +1258,29 @@ body {
 .shop-column-b {
     flex: 0 1 33.333%;
 }
-.block-shop {
+.shop-block {
     height: 100%;
 }
-.block-shop-row {
+.shop-row {
     display: flex;
     height: 50%;
 }
-.block-shop-row-bottom {
+.shop-row-bottom {
     height: 50%;
 }
 .shop-item {
     padding-top: 200%;
 }
-.block-shop-column {
+.shop-column-block {
     flex: 0 1 50%;
     height: 100%;
 }
-.item {
+.shop-block-item {
     display: block;
     position: relative;
     height: 100%;
 }
-.item-logo {
+.shop-block-item-logo {
     position: absolute;
     top: 0;
     left: 0;
@@ -1175,29 +1292,28 @@ body {
     align-items: center;
     background-color: rgba(5, 77, 86, 0.6);
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s, visibility 0.8s linear 0.1s;
+    transition: opacity 1.8s linear;
 }
-.item-logo img {
+.shop-block-item:hover .shop-block-item-logo {
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+.shop-block-item-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-.item-image {
+.shop-block-item-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.item-image img {
+.shop-block-item-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-.item:hover .item-logo {
-    visibility: visible;
-    opacity: 1;
 }
 .shop-footer {
     margin-bottom: 2px;
@@ -1219,7 +1335,7 @@ body {
     .shop-body {
         flex-wrap: wrap;
     }
-    .shop-column {
+    .shop-column, .shop-column-b {
         flex: 1 1 50%;
     }
     .shop-item {
@@ -1233,6 +1349,8 @@ body {
     }
 }
 /*---The end of the shop's styles--------*/
+
+
 .all-posts {
     background-color: var(--bgServices);
     padding: 100px 0;
